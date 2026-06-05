@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. Global Styles & Reset
-   ========================================================================== */
+/* 1. Global Styles & Reset*/
 * {
     margin: 0;
     padding: 0;
@@ -37,14 +35,7 @@ img {
     margin: 0 auto;
 }
 
-.clearfix::after, .clearfix::before {
-    content: "";
-    display: table;
-    clear: both;
-}
-.clearfix {
-    clear: both;
-}
+
 
 .section-heading {
     text-align: center;
@@ -74,10 +65,12 @@ img {
     z-index: 1000; 
     border-bottom: 1px solid #e1d5eb;
 }
-
-.logo {
-    float: left; 
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 .logo-img {
     height: 43px;
     border-radius: 10px;
@@ -91,13 +84,10 @@ img {
     vertical-align: middle;
 }
 
-.menu {
-    float: right; 
-}
 
 .menu .menu-item {
     color: #666;
-    margin-left: 30px;
+    margin-left: 35px;
     font-weight: 500;
     font-size: 1rem;
     padding-bottom: 5px;
@@ -131,17 +121,20 @@ img {
     background-color: #ffffff;
 }
 
-.hero-image-col {
-    width: 50%;
-    float: left;
-    padding-right: 25px;
-    padding: 0; 
+.hero .container{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-image-col{
+    flex: 1;
+    padding: 0;
     margin: 0;
 }
 
-.hero-text-col {
-    width: 50%;
-    float: left;
+.hero-text-col{
+    flex: 1;
     padding-left: 60px;
 }
 
@@ -298,7 +291,7 @@ img {
     font-size: 1.5rem;
 }
 
-.compare-table td stroke, .compare-table td strong {
+ .compare-table td strong {
     color: #020202 !important;
     font-size: 1.3rem;
 }
@@ -351,16 +344,19 @@ img {
     text-align: left; 
 }
 
-.winner-banner .winner-trophy {
-    width: 32px; 
-    height: auto;
-    float: left; 
-    margin-right: 15px; 
-    margin-top: 4px; 
+.winner-banner{
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
 }
 
-.winner-banner .banner-text {
-    overflow: hidden; 
+.winner-banner .winner-trophy{
+    width:32px;
+    height:auto;
+}
+
+.winner-banner .banner-text{
+    flex:1;
 }
 
 .winner-banner .banner-text h3 {
@@ -394,30 +390,27 @@ img {
 /* ==========================================================================
    5. Customer Reviews Section
    ========================================================================== */
-.reviews-section {
-    padding: 80px 0;
-    background-color: #ffffff;
-    font-family: sans-serif;
-    overflow: visible !important; 
-}
-
-.reviews-container {
+.reviews-container{
     width: 90%;
     max-width: 1150px;
+    padding-bottom: 80px;
     margin: 0 auto;
-    position: relative; 
-    overflow: visible !important; 
+
+    display:flex;
+    gap:35px;
+    align-items:flex-start;
+
+    overflow: visible !important;
 }
 
-.reviews-container .rating-sidebar {
-    width: 32%;
-    float: left;
-    position: -webkit-sticky;
+
+.reviews-container .rating-sidebar{
+    flex:0 0 34%;
+
     position: sticky;
-    top: 120px; 
-    padding-right: 35px;
-    box-sizing: border-box;
-    z-index: 10;
+    top: 120px;
+
+    align-self:flex-start;
 }
 
 .sticky-rating-card {
@@ -499,20 +492,15 @@ img {
     vertical-align: middle;
 }
 
+
+
 .sidebar-footer {
-    width: 100%;
+    display: flex;
 }
 
 .footer-stat {
-    width: 50%;
-    float: left;
+    flex: 1;
     text-align: center;
-}
-
-.footer-stat strong {
-    display: block;
-    font-size: 1.3rem;
-    color: #1c1c1e;
 }
 
 .footer-stat span {
@@ -523,8 +511,7 @@ img {
 }
 
 .reviews-container .reviews-list {
-    width: 68%;
-    float: left;
+    flex: 1;
     box-sizing: border-box;
 }
 
@@ -538,7 +525,8 @@ img {
 }
 
 .card-header {
-    width: 100%;
+    display: flex;
+    align-items: flex-start;
     margin-bottom: 12px;
 }
 
@@ -546,7 +534,6 @@ img {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    float: left;
     margin-right: 15px;
     border: 2px solid #7047eb; 
     padding: 2px;
@@ -555,7 +542,7 @@ img {
 }
 
 .user-info {
-    float: left;
+    flex: 1;
     text-align: left;
 }
 
@@ -572,7 +559,6 @@ img {
 }
 
 .badge-wrapper {
-    float: right;
     text-align: right;
 }
 
@@ -594,7 +580,6 @@ img {
 }
 
 .review-text {
-    clear: both;
     text-align: left;
     color: #3a3a3a;
     font-size: 1.05rem;        
@@ -603,10 +588,9 @@ img {
     margin: 0;
 }
 
-.load-more-container {
-    text-align: center;
-    padding-top: 20px;
-    clear: both;
+.load-more-container{
+    text-align:center;
+    padding-top:20px;
 }
 
 .load-more-btn {
@@ -625,11 +609,7 @@ img {
     background-color: #5b34cc;
 }
 
-.reviews-container::after {
-    content: "";
-    display: table;
-    clear: both;
-}
+
 
 /* ==========================================================================
    6. Setup Accessories Section
@@ -643,7 +623,6 @@ img {
     padding: 60px 0;
     background-color: #f9f9fb; 
     font-family: sans-serif;
-    clear: both; 
 }
 
 .setup-header {
@@ -673,12 +652,13 @@ img {
     max-width: 1150px;
     margin: 0 auto;
     box-sizing: border-box;
+
+    display: flex;
+    gap: 24px;
 }
 
 .product-card-col {
-    width: 25%;
-    float: left;
-    padding: 0 12px; 
+    flex: 1;
     box-sizing: border-box;
 }
 
@@ -752,21 +732,17 @@ img {
 }
 
 .price-btn-row {
-    width: 100%;
-    display: block;
-    height: 35px;
-    line-height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
 .prod-price {
     font-size: 1.15rem;
     font-weight: 700;
     color: #1c1c1e;
-    float: left;
 }
 
 .add-to-cart-btn {
-    float: right;
     background-color: #7047eb;
     color: #ffffff;
     border: none;
@@ -782,7 +758,6 @@ img {
 .view-all-container {
     text-align: center;
     padding-top: 35px;
-    clear: both;
 }
 
 .view-all-btn {
@@ -801,11 +776,6 @@ img {
     color: #ffffff;
 }
 
-.cards-container::after {
-    content: "";
-    display: table;
-    clear: both;
-}
 
 /* ==========================================================================
    7. Footer Section
@@ -815,7 +785,6 @@ img {
     color: #ffffff;
     padding-top: 40px;
     font-family: sans-serif;
-    clear: both; 
 }
 
 .footer-container {
@@ -823,21 +792,22 @@ img {
     max-width: 1150px;
     margin: 0 auto;
     padding-bottom: 5px;
+
+    display: flex;
 }
 
 .footer-col {
-    float: left;
     box-sizing: border-box;
     padding: 0 15px;
 }
 
 .footer-brand-col {
-    width: 37%;
+    flex: 2;
     padding-left: 0; 
 }
 
 .footer-links-col {
-    width: 21%;
+    flex: 1;
 }
 
 .footer-logo {
@@ -865,16 +835,21 @@ img {
 }
 
 .social-icons .social-btn {
-    display: block;
-    float: left;
-    width: 36px;
-    height: 36px;
-    line-height: 36px; 
-    background-color: #1e293b;
-    text-align: center;
-    border-radius: 8px;
-    margin-right: 12px;
-    transition: background 0.2s;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    width:36px;
+    height:36px;
+
+    background-color:#1e293b;
+    border-radius:8px;
+    transition:background 0.2s;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
 }
 
 .social-icons .social-btn img {
@@ -926,10 +901,13 @@ img {
     width: 90%;
     max-width: 1150px;
     margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .copyright-text {
-    float: left;
     color: #64748b;
     font-size: 0.85rem;
     line-height: 35px; 
@@ -945,7 +923,8 @@ img {
 }
 
 .payment-methods {
-    float: right;
+    display: flex;
+    gap: 10px;
 }
 
 .payment-methods .pay-card {
@@ -959,9 +938,3 @@ img {
     display: inline-block;
 }
 
-.footer-container::after,
-.footer-bottom-container::after {
-    content: "";
-    display: table;
-    clear: both;
-}
